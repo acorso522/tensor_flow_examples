@@ -44,5 +44,4 @@ You can use tensorboard to visualize your graph: https://www.tensorflow.org/get_
 
 `%qtconsole` executed within a cell gives you a terminal. 
 
-
-
+If using an interactive session in tensorflow, don't have to worry about doing sess.run() everywhere, can instead just do <tensor>.eval or <operation>.run without referencing the sess.
