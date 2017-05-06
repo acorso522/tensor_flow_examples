@@ -39,32 +39,10 @@ sess = tf.Session()
 print(sess.run(hello))
 ```
 
+Details on what the heck TensorFlow actually is: https://www.tensorflow.org/get_started/get_started
+You can use tensorboard to visualize your graph: https://www.tensorflow.org/get_started/summaries_and_tensorboard
 
-
-# Point Intellij Project Towards Virtualenv
-
-- Go to project structure File drop down
-- Add a new Python SDK pointing towards your local virtualenv
-- http://stackoverflow.com/questions/20877106/using-intellijidea-within-an-existing-virtualenv
-
-
-# Installing Keras after installing tensorflow
-
-- Tensorflow is the backend of keras
-- http://www.pyimagesearch.com/2016/11/14/installing-keras-with-tensorflow-backend/
-
-# Get working directory and change
-```python
-import os
-cwd = os.getcwd()
-cwd
-os.chdir('/Users/aorso/Documents/All Projects/RedML/Anomaly Detection/Alex Python Version/alex_liang_anomaly_detection')
-os.getcwd()
-```
-
-When running import, python will look in the sys.path and so you need to make sure that the module you want is in one of those directories. May or may not include the current working directory.
-
-
+`%qtconsole` executed within a cell gives you a terminal. 
 
 
 
