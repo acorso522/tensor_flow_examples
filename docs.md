@@ -1,5 +1,7 @@
 # Python + Tensor Flow
 
+
+## Setup
 If you don't already have it, install Anaconda, which is just an open-source data-science platform. This will include a large number of the pakcages we will use, including `jupyter` which is where we will work on code. We will use Python 3 unless problem present themselves, though tensor flow should be fine with it.
 
 https://www.continuum.io/downloads#macos
@@ -7,46 +9,36 @@ https://www.continuum.io/downloads#macos
 This may take a while so give it some time. 
 
 
-Need to add the anaconda distribution to your path so your computer knows where to look for global commands like `jupyter`. Note that this command will prepend it to the front of your path so you will now use the anaconda distribution by default when running `python` in the command line. 
+Add the following line to your `.zshrc` file. Need to add the anaconda distribution to your PATH so your computer knows where to look for global commands like `jupyter`. Note that this command will prepend it to the front of your path so you will now use the anaconda distribution by default when running `python` in the command line. 
+
 ```shell
 export PATH=/Users/AndrewOrso/anaconda3/bin:$PATH
 ```
 
 
-# Install TensorFlow
+## Python + Package setup
+
+Open up a jupyter notebook inside of the directory you want to work in. 
+
+### Install TensorFlow
 
 Install pip and virtualenv
 
-```shell
-sudo easy_install pip
-sudo pip install --upgrade virtualenv
-```
-
-Create a virtualenv in a new directory
+Now, install TensorFlow just as you would for a regular Pip installation.
 
 ```shell
-virtualenv --system-site-packages ~/tensorflow
-```
---system-site-packages brings in all other site packages
-
-Activate the environment
-
-```shell
-source ~/tensorflow/bin/activate
+pip install tensorflow
 ```
 
-Now, install TensorFlow just as you would for a regular Pip installation. First select the correct binary to install and then pip install.
+Run a simple python script to test it out
 
-```shell
-export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0-py2-none-any.whl
-pip install --upgrade $TF_BINARY_URL
+```python
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
 ```
-a
-To deactivate the virtualenv 
 
-```shell 
-(tensorflow)$ deactivate
-```
 
 
 # Point Intellij Project Towards Virtualenv
