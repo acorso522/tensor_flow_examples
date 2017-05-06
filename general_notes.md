@@ -1,16 +1,18 @@
-# Python + Tensor Flow
 
-If you don't already have it, install Anaconda, which is just an open-source data-science platform. This will include a large number of the pakcages we will use, including `jupyter` which is where we will work on code. We will use Python 3 unless problem present themselves, though tensor flow should be fine with it.
+# Installing zshell
 
-https://www.continuum.io/downloads#macos
-
-This may take a while so give it some time. 
-
-
-Need to add the anaconda distribution to your path so your computer knows where to look for global commands like `jupyter`. Note that this command will prepend it to the front of your path so you will now use the anaconda distribution by default when running `python` in the command line. 
 ```shell
-export PATH=/Users/AndrewOrso/anaconda3/bin:$PATH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+### If using Agnoster theme
+```shell
+git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh from terminal / command line
+Open iTerm2->Preferences->Profiles->Change Font-> 12pt Meslo LG S DZ Regular for Powerline
+```
+
 
 
 # Install TensorFlow
